@@ -11,6 +11,9 @@ from __future__ import division, print_function
 import os
 
 import warnings
+import numpy as np
+import tensorflow
+
 
 from keras import backend as K
 from keras.layers import Input
@@ -26,6 +29,9 @@ from keras.applications.imagenet_utils import _obtain_input_shape
 # from keras.engine.topology import get_source_inputs
 from keras.utils.data_utils import get_file
 from keras.utils import layer_utils
+from tensorflow.keras.utils import get_source_inputs
+from keras.preprocessing import image
+from keras.applications.imagenet_utils import preprocess_input
 
 
 WEIGHTS_PATH = 'https://github.com/GKalliatakis/Keras-Application-Zoo/releases/download/0.1/vgg16-hybrid1365_weights_tf_dim_ordering_tf_kernels.h5'
